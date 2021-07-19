@@ -1,11 +1,22 @@
 import React, {useState} from 'react'
 import {Paper,Stepper,Step,StepLabel,Typography, Circularprogress,Divider,Button} from '@material-ui/core';
 import useStyles from './styles'
+import AddressForm from '../AddressForm';
+import PaymentForm from '../PaymentForm';
 
 const steps = ['Shipping address','Payment details']
 const Checkout = () => {
     const classes = useStyles();
     const [activeStep, setActiveStep]=useState(0);
+
+    const Confirmation =()=>(
+        <div>
+            Confirmation
+        </div>
+    )
+    const Form =()=>activeStep === 0
+        ? <AddressForm />
+        : <PaymentForm />
     return (
         <>
             <div className={classes.toolbar}/>
@@ -19,6 +30,7 @@ const Checkout = () => {
                             </Step>
                         ))}
                     </Stepper>
+                    {activeStep === steps.length? <Confirmation />:<Form />}
 
                 </Paper>
 
