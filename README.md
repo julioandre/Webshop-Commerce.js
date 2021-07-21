@@ -1,6 +1,18 @@
-# Getting Started with Create React App
+# Webshop with Commerce.js attached
+This is a webshop app which uses ReactJS and Commerce.js api in development. The webshop is setup to sell meat and farm produce.
+MaterialUI was used in the styling of the project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Contents of the repository
+The repository contains just one branch that contains all the necessary files for the project.
+
+# Folder/ File Structure
+* Public: React Static Files
+* src: Code Files
+    * components: All React Functional Components
+
+# Current Known Issues
+There is a problem with the fetching of tokens from commerce.js using useEffect, this problem is still trying to be fixed and then
+a payment option will be added
 
 ## Available Scripts
 
