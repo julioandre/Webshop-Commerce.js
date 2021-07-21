@@ -1,5 +1,5 @@
 import React from 'react'
-import { TextField, Grid, useFormControl } from '@material-ui/core';
+import { TextField, Grid } from '@material-ui/core';
 import { useFormContext, Controller } from 'react-hook-form';
 
 const FormInput = ({name,label,required}) => {
@@ -9,13 +9,12 @@ const FormInput = ({name,label,required}) => {
     return (
         <Grid item xs={12} sm={6}>
             <Controller
-                as={TextField}
+                render={({ field }) => <TextField {...field}  id='filled-basic'  label={label}
+                required={required}  fullWidth/>}
                 control={control}
-                fullWidth
                 name={name}
-                label={label}
-                required={required}
-            />
+               
+                />
         </Grid>
     )
 }
